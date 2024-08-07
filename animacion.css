@@ -1,10 +1,28 @@
+body {
+  background-color: #f7d9da;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.envelope-wrapper {
+  width: 100vw;
+  max-width: 400px;
+  height: 100vh;
+  max-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #envelope {
-  margin: 0 auto;
   position: relative;
-  width: 90vw;
-  max-width: 280px;
-  height: 58vw;
-  max-height: 180px;
+  width: 80vw; /* Increased size for mobile */
+  max-width: 350px; /* Maximum width to keep the envelope proportional */
+  height: 60vw; /* Increased size for mobile */
+  max-height: 250px; /* Maximum height to keep the envelope proportional */
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
   background-color: #f9c5c8;
@@ -19,19 +37,19 @@
 }
 
 .flap {
-  border-left: 45vw solid transparent;
-  border-right: 45vw solid transparent;
-  border-bottom: 26vw solid transparent;
-  border-top: 31vw solid #ff3333;
+  border-left: 40vw solid transparent;
+  border-right: 40vw solid transparent;
+  border-bottom: 22vw solid transparent;
+  border-top: 30vw solid #ff3333;
   transform-origin: top;
   pointer-events: none;
 }
 
 .pocket {
-  border-left: 45vw solid #ff9999;
-  border-right: 45vw solid #ff9999;
-  border-bottom: 29vw solid #fd8787;
-  border-top: 29vw solid transparent;
+  border-left: 40vw solid #ff9999;
+  border-right: 40vw solid #ff9999;
+  border-bottom: 24vw solid #fd8787;
+  border-top: 28vw solid transparent;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
 }
@@ -110,7 +128,7 @@
 
 .hearts {
   position: absolute;
-  top: 50%;
+  top: 90px;
   left: 0;
   right: 0;
   z-index: 2;
@@ -127,12 +145,12 @@
 .heart:after {
   position: absolute;
   content: "";
-  left: 25%;
+  left: 50px;
   top: 0;
-  width: 20%;
-  height: 32%;
+  width: 50px;
+  height: 80px;
   background: #D00000;
-  border-radius: 50% 50% 0 0;
+  border-radius: 50px 50px 0 0;
   transform: rotate(-45deg);
   transform-origin: 0 100%;
   pointer-events: none;
@@ -194,23 +212,6 @@
   }
 }
 
-body {
-  background-color: #f7d9da;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
-
-.envelope-wrapper {
-  height: 100vh;
-  max-height: 380px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .reset {
   text-align: center;
   margin-top: 20px;
@@ -243,23 +244,25 @@ body {
 /* Media queries para ajustes en pantallas pequeñas */
 @media (max-width: 600px) {
   #envelope {
-    width: 100vw;
-    height: auto;
+    width: 95vw;
+    max-width: 320px;
+    height: 75vw;
+    max-height: 260px;
   }
 
   .flap, .pocket {
-    border-left-width: 45vw;
-    border-right-width: 45vw;
+    border-left-width: 47.5vw;
+    border-right-width: 47.5vw;
   }
 
   .flap {
-    border-bottom-width: 26vw;
-    border-top-width: 31vw;
+    border-bottom-width: 28vw;
+    border-top-width: 35vw;
   }
 
   .pocket {
-    border-bottom-width: 29vw;
-    border-top-width: 29vw;
+    border-bottom-width: 32vw;
+    border-top-width: 33vw;
   }
 
   .letter {
